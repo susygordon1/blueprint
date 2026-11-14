@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Community | Seeker of Story</title>
+  <meta name="description" content="Join the Seeker of Story community: Seeker Circles, Story Nights and encouragement for the road.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="community">
+<main>
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Connect</p>
+      <h1>You're not walking this <span class="script">alone</span></h1>
+      <p>A faith-driven community of seekers who show up for each other.</p>
+    </div>
+  </header>
+  <nav class="jumpbar" aria-label="On this page">
+    <div class="container chips" style="justify-content:center">
+      <a class="chip" href="#circles">Seeker Circles</a>
+      <a class="chip" href="#events">Events</a>
+      <a class="chip" href="#resources">Resources</a>
+      <a class="chip" href="#join">Join</a>
+    </div>
+  </nav>
+
+  <section id="circles">
+    <div class="container">
+      <div class="section-head"><div><p class="kicker">How we connect</p><h2>Find your people.</h2></div></div>
+      <div class="grid grid-3">
+        <div class="feature reveal">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="14" r="6"/><circle cx="11" cy="19" r="4.5"/><circle cx="37" cy="19" r="4.5"/><path d="M13 38c0-7 5-12 11-12s11 5 11 12"/></svg>
+          <h3>Seeker Circles</h3><p>Small groups that meet for encouragement, prayer and accountability as you write your next chapter.</p>
+        </div>
+        <div class="feature reveal">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="17" y="4" width="14" height="24" rx="7"/><path d="M11 22c0 7 6 13 13 13s13-6 13-13M24 35v8"/></svg>
+          <h3>Story Nights</h3><p>Live gatherings where seekers share short stories and the community responds with encouragement.</p>
+        </div>
+        <div class="feature reveal">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 42s-16-9-16-21a9 9 0 0 1 16-5 9 9 0 0 1 16 5c0 12-16 21-16 21z"/></svg>
+          <h3>Prayer &amp; Encouragement</h3><p>Share a request or a win. Someone in the community will be standing with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light" id="events">
+    <div class="container">
+      <div class="section-head"><div><p class="kicker">Gatherings</p><h2>Upcoming events</h2></div></div>
+      <div id="eventList"></div>
+    </div>
+  </section>
+
+  <section class="section-dark2" id="resources">
+    <div class="container">
+      <div class="section-head">
+        <div><p class="kicker">Resources &amp; tools</p><h2>Shared by the community.</h2></div>
+        <p class="lead" style="margin:0">Guides, worksheets and devotionals, plus resources seekers have shared with us.</p>
+      </div>
+      <div class="toolbar"><div class="chips" id="resChips" role="toolbar" aria-label="Filter resources"></div></div>
+      <div class="grid grid-4" id="resourceGrid"></div>
+      <div class="split" style="margin-top:3rem">
+        <div class="feature">
+          <h3>Need help right now?</h3>
+          <p>If you're in crisis, please reach out to someone today. In the U.S., call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) any time, or call <strong>911</strong> in an emergency.</p>
+        </div>
+        <div class="feature">
+          <h3>Share a resource</h3>
+          <p>Know a book, ministry, program or tool that helped you? Tell us and we'll consider adding it.</p>
+          <p style="margin-top:1rem"><a class="link-arrow" href="about.html#contact">Suggest a resource →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light" id="join">
+    <div class="container split">
+      <div>
+        <p class="kicker">Join us</p>
+        <h2>Become a Seeker.</h2>
+        <p class="lead">Membership is free. Tell us a little about yourself and we'll connect you with a circle, upcoming events and new stories.</p>
+        <h3 style="margin-top:2rem">Community guidelines</h3>
+        <ul class="lead" style="padding-left:1.2rem">
+          <li>Lead with grace. Every story is sacred.</li>
+          <li>Keep what's shared in circles, in circles.</li>
+          <li>Encourage, don't fix. Listen first.</li>
+          <li>No selling or soliciting in community spaces.</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <form class="form" data-form="community" novalidate>
+          <div class="form-row">
+            <label>First name<input name="first_name" required autocomplete="given-name"></label>
+            <label>Last name<input name="last_name" autocomplete="family-name"></label>
+          </div>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          <label>City / State<input name="location" autocomplete="address-level2"></label>
+          <label>I'm interested in
+            <select name="interest">
+              <option>Joining a Seeker Circle</option>
+              <option>Attending Story Nights</option>
+              <option>Prayer &amp; encouragement</option>
+              <option>Volunteering</option>
+              <option>All of the above</option>
+            </select>
+          </label>
+          <button class="btn btn-gold" type="submit">Join the community</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

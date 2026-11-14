@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share Your Story | Seeker of Story</title>
+  <meta name="description" content="Share your story of challenge, faith and transformation with the Seeker of Story community.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="share">
+<main>
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Your next chapter</p>
+      <h1>Share Your <span class="script">Story</span></h1>
+      <p>You don't need to be polished. You just need to be honest.</p>
+    </div>
+  </header>
+  <section class="section-light">
+    <div class="container split" style="align-items:start">
+      <div>
+        <p class="kicker">How it works</p>
+        <h2>Three simple steps.</h2>
+        <div class="journey" style="grid-template-columns:1fr;margin-top:1.6rem">
+          <div class="step"><h3>Tell us your story</h3><p>Fill out the form. A few honest paragraphs is plenty. Your draft saves automatically on this device.</p></div>
+          <div class="step"><h3>We'll connect</h3><p>Our team reads every submission and reaches out to talk through your story and what feels right to share.</p></div>
+          <div class="step"><h3>Share it your way</h3><p>Written, video interview, or on the podcast. You approve everything before it's published.</p></div>
+        </div>
+      </div>
+      <div class="form-card">
+        <form class="form" data-form="story" novalidate>
+          <div class="form-row">
+            <label>First name<input name="first_name" required autocomplete="given-name"></label>
+            <label>Last name<input name="last_name" autocomplete="family-name"></label>
+          </div>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          <label>Phone <small>(optional)</small><input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Your story is mostly about
+            <select name="category" required>
+              <option value="">Choose one…</option>
+              <option>Transformation</option><option>Business</option><option>Overcoming</option><option>Faith</option><option>What's Next</option>
+            </select>
+          </label>
+          <label>Give your story a title<input name="story_title" placeholder="e.g. The day I stopped running" required></label>
+          <label>Your story <small>Where were you, what happened, and where are you now?</small>
+            <textarea name="story" required></textarea></label>
+          <label>How would you like to share it?
+            <select name="format">
+              <option>Video interview</option><option>Podcast guest</option><option>Written story</option><option>Not sure yet</option>
+            </select>
+          </label>
+          <label>Link to a video or photo <small>(optional: YouTube, Google Drive, etc.)</small><input type="url" name="media_link" placeholder="https://"></label>
+          <label class="check"><input type="checkbox" name="consent" required> I understand Seeker of Story will contact me before publishing anything, and I can change my mind at any time.</label>
+          <button class="btn btn-gold" type="submit">Submit my story</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

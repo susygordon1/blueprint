@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seeker of Story | Real Stories. Real People. Real Transformations.</title>
+  <meta name="description" content="A faith-driven storytelling community where everyday people share their stories of challenges, transformation, and what's next.">
+  <meta property="og:title" content="Seeker of Story">
+  <meta property="og:description" content="Real Stories. Real People. Real Transformations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" style="padding:0">
+    <div class="container hero-inner">
+      <p class="eyebrow">From lost to launched</p>
+      <h1>
+        <span>Real Stories.</span>
+        <span>Real People.</span>
+        <span>Real <span class="script script-underline">Transformations.</span></span>
+      </h1>
+      <p class="hero-sub">A faith-driven community where everyday people share their stories of challenges, transformation, and what's next.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="stories.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg> Watch Stories</a>
+        <a class="btn btn-ghost" href="share.html">Share Your Story</a>
+      </div>
+    </div>
+
+    <div class="container pillars">
+      <a class="pillar" href="stories.html">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><circle cx="13" cy="30" r="8"/><circle cx="35" cy="30" r="8"/><path d="M21 30h6M7 26l5-12h6l3 10M41 26l-5-12h-6l-3 10"/></svg>
+        <strong>EXPLORE</strong><span>Real Stories</span>
+      </a>
+      <a class="pillar" href="community.html">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="14" r="6"/><circle cx="11" cy="19" r="4.5"/><circle cx="37" cy="19" r="4.5"/><path d="M13 38c0-7 5-12 11-12s11 5 11 12M3 36c0-5 3-9 8-9M45 36c0-5-3-9-8-9"/></svg>
+        <strong>CONNECT</strong><span>with Seekers</span>
+      </a>
+      <a class="pillar" href="community.html#resources">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 12C19 8 11 8 5 10v28c6-2 14-2 19 2 5-4 13-4 19-2V10c-6-2-14-2-19 2zM24 12v28"/></svg>
+        <strong>ACCESS</strong><span>Resources &amp; Tools</span>
+      </a>
+      <a class="pillar" href="podcast.html">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="17" y="4" width="14" height="24" rx="7"/><path d="M11 22c0 7 6 13 13 13s13-6 13-13M24 35v8M17 43h14M17 12h4M17 18h4M27 12h4M27 18h4"/></svg>
+        <strong>LISTEN</strong><span>The SOS Podcast</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY RIBBON ============ -->
+  <div class="ribbon" style="padding:2.2rem 0 2rem">
+    <nav class="container ribbon-row" aria-label="Story categories">
+      <span class="rule"></span>
+      <a href="stories.html">Stories</a><span class="slash">/</span>
+      <a href="stories.html#transformation">Transformation</a><span class="slash">/</span>
+      <a href="stories.html#business">Business</a><span class="slash">/</span>
+      <a href="stories.html#overcoming">Overcoming</a><span class="slash">/</span>
+      <a href="stories.html#whatsnext">What's Next</a>
+      <span class="rule"></span>
+    </nav>
+  </div>
+
+  <!-- ============ FEATURED STORIES ============ -->
+  <section class="section-light" style="padding-top:40px">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Featured stories</p>
+          <h2>Every seeker has a story.</h2>
+        </div>
+        <a class="link-arrow" href="stories.html">View all stories →</a>
+      </div>
+      <div class="grid grid-3" id="featuredStories"></div>
+    </div>
+  </section>
+
+  <!-- ============ MEET THE SEEKERS ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Meet the seekers</p>
+          <h2>Real people. Real profiles.</h2>
+        </div>
+        <a class="link-arrow" href="stories.html">Meet them all →</a>
+      </div>
+      <div class="grid grid-4" id="seekerGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <section class="section-light">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The seeker's journey</p>
+          <h2>From lost to <span class="script" style="color:var(--gold-2)">launched</span></h2>
+        </div>
+        <p class="lead" style="margin:0">Wherever you are on the road, you're not walking it alone.</p>
+      </div>
+      <div class="journey">
+        <div class="step reveal"><h3>Lost</h3><p>The hard season: loss, confusion, or simply not knowing what's next.</p></div>
+        <div class="step reveal"><h3>Seeking</h3><p>Asking honest questions and looking for people who've walked this road.</p></div>
+        <div class="step reveal"><h3>Found</h3><p>Faith, community and clarity begin to rewrite the story.</p></div>
+        <div class="step reveal"><h3>Launched</h3><p>Living the next chapter, and turning around to help the next seeker.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PODCAST TEASER ============ -->
+  <section class="section-dark2">
+    <div class="container split">
+      <div class="art-box reveal">
+        <div>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="17" y="4" width="14" height="24" rx="7"/><path d="M11 22c0 7 6 13 13 13s13-6 13-13M24 35v8M17 43h14"/></svg>
+          <p class="eyebrow" style="margin-top:1rem;letter-spacing:.35em">The SOS Podcast</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="kicker">Listen in</p>
+        <h2>Conversations for the road.</h2>
+        <p class="lead">Honest conversations with seekers, founders and faith leaders about the moments that changed everything, and what came next.</p>
+        <div class="hero-ctas" style="justify-content:flex-start;margin-top:1.6rem">
+          <a class="btn btn-gold" href="podcast.html">Listen to episodes</a>
+          <a class="btn btn-ghost" href="#" data-youtube>Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMMUNITY GIVING ============ -->
+  <section class="giving" id="give">
+    <div class="container">
+      <div class="center" style="margin-bottom:3rem">
+        <p class="kicker">Community funded</p>
+        <h2>Pay it <span class="script">forward.</span></h2>
+        <p class="lead">Seeker of Story is a nonprofit community. Every story is free to share, because people like you cover the cost for someone else.</p>
+      </div>
+      <div class="tiers" id="givingTiers"></div>
+      <div class="center" style="margin-top:4rem">
+        <p class="kicker">Stories made possible by</p>
+        <div class="partners">
+          <a class="partner-slot partner-real" href="https://mlkprearrangements.com" target="_blank" rel="noopener" title="MLK Pre-Arrangements"><img src="assets/mlk-logo.png" alt="MLK Pre-Arrangements"></a>
+          <div class="partner-slot">Your logo here</div>
+          <div class="partner-slot">Your logo here</div>
+          <div class="partner-slot">Your logo here</div>
+        </div>
+        <p style="margin-top:1.4rem"><a class="link-arrow" href="#" data-give="Community Partner">Become a community partner →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHARE CTA ============ -->
+  <div class="cta-band">
+    <div class="container">
+      <p class="eyebrow">Your next chapter</p>
+      <h2>Your story could be someone's turning point.</h2>
+      <p>We're looking for real stories of challenge, faith, business and breakthrough. You don't need to be polished. Just be honest.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="share.html">Share Your Story</a>
+        <a class="btn btn-ghost" href="community.html">Join the Community</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="section-light" style="text-align:center">
+    <div class="container">
+      <p class="kicker">Stay in the story</p>
+      <h2 style="margin-bottom:.6rem">New stories in your inbox.</h2>
+      <p class="lead" style="margin:0 auto 1.6rem">One encouraging email when new stories and episodes drop. No spam, ever.</p>
+      <form class="inline-form" data-form="newsletter" novalidate style="flex-wrap:wrap">
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email">
+        <button class="btn btn-dark" type="submit">Subscribe</button>
+        <div class="form-msg" role="status" style="flex-basis:100%"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

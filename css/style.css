@@ -498,3 +498,42 @@ section[id] { scroll-margin-top: 150px; }
 .logo-img { height: 58px; width: auto; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,.55)); }
 .logo-footer { height: 52px; }
 @media (max-width: 600px) { .logo-img { height: 46px; } }
+
+/* ---------- Story pillars (profile) ---------- */
+.journey-big { display: flex; gap: .8rem; justify-content: center; align-items: center; font-family: var(--serif); font-size: 1.5rem; color: var(--gold); margin: .4rem 0 0; flex-wrap: wrap; }
+.journey-big b { color: var(--muted); font-weight: 400; }
+.evidence-badge { display: inline-block; margin-top: 1rem !important; padding: .4rem 1rem; border: 1px solid var(--line); border-radius: 999px; font-size: .75rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold-soft) !important; }
+.story-pillars { padding: 90px 0; }
+.pillars-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 0 0 2.4rem; max-width: 720px; }
+.pillar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+.sp-pillar { position: relative; background: #fffaf0; border: 1px solid #e6dac2; border-top: 4px solid var(--gold); border-radius: var(--radius); padding: 2rem 2rem 1.8rem; }
+.sp-pillar-num { position: absolute; top: 1.2rem; right: 1.4rem; font-family: var(--serif); font-size: 2.6rem; font-weight: 800; color: #eadcbf; line-height: 1; }
+.sp-pillar h3 { font-family: var(--serif); font-size: 1.45rem; margin: 0 0 .9rem; padding-right: 3rem; }
+.sp-pillar p { color: #5b5142; margin: 0 0 .9rem; }
+.sp-pillar-points { margin: .4rem 0 0; padding: 0; list-style: none; }
+.sp-pillar-points li { position: relative; padding: .45rem 0 .45rem 1.6rem; color: var(--paper-ink); border-top: 1px dashed #e0d2b5; }
+.sp-pillar-points li::before { content: ""; position: absolute; left: 0; top: .95rem; width: .6rem; height: .6rem; border-radius: 50%; background: var(--gold); }
+.pull-quote { padding: 90px 0; text-align: center; background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pull-quote blockquote { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 3vw, 2.3rem); line-height: 1.35; max-width: 880px; margin: 0 auto; color: var(--cream); }
+.quote-by { margin-top: 1.2rem; color: var(--gold); letter-spacing: .3em; text-transform: uppercase; font-size: .8rem; }
+.writing { padding: 90px 0; }
+.narrow { max-width: 760px; }
+.writing h2 { font-family: var(--script); font-weight: 400; font-size: 3.4rem; color: var(--gold-2); margin: 0 0 .4rem; }
+.writing-intro { color: #5b5142; margin: 0 0 2rem; }
+.poem { border-left: 3px solid var(--gold); padding-left: 1.6rem; }
+.poem p { font-family: var(--serif); font-size: 1.12rem; line-height: 1.7; margin: 0 0 .5rem; color: var(--paper-ink); }
+.poem p:last-child { font-weight: 700; color: var(--gold-2); margin-top: 1rem; }
+.poem-credit { margin-top: 1.4rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; font-size: .8rem; color: var(--muted-2); }
+.poem-credit::before { content: "— "; }
+.milestones { padding: 90px 0; }
+.milestones h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 0 0 2.4rem; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.timeline li { position: relative; display: grid; grid-template-columns: 180px 1fr; gap: 1.4rem; padding: 0 0 1.8rem 2rem; }
+.timeline li::before { content: ""; position: absolute; left: -8px; top: .35rem; width: 14px; height: 14px; border-radius: 50%; background: var(--ink); border: 2px solid var(--gold); }
+.timeline li:last-child::before { background: var(--gold); }
+.timeline .when { font-weight: 700; color: var(--gold); letter-spacing: .08em; text-transform: uppercase; font-size: .85rem; }
+.timeline .what { color: var(--text); }
+.scripture { margin-top: 2rem; font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--cream); }
+.scripture span { font-style: normal; font-family: var(--sans); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-left: .4rem; }
+@media (max-width: 900px) { .pillar-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .timeline li { grid-template-columns: 1fr; gap: .2rem; } .sp-pillar { padding: 1.6rem 1.3rem; } }

@@ -1,6 +1,6 @@
 /* =========================================================
    Seeker of Story — global styles
-   Swap the hero image by replacing hero-bg.jpg
+   Swap the hero image by dropping a file at assets/hero-bg.jpg
    ========================================================= */
 :root {
   --ink: #120f0b;
@@ -22,7 +22,7 @@
   --script: "Satisfy", "Brush Script MT", cursive;
   --sans: "Montserrat", "Segoe UI", system-ui, sans-serif;
   --max: 1200px;
-  --hero-image: url("hero-bg.jpg");
+  --hero-image: url("../assets/hero-bg.jpg");
 }
 
 * { box-sizing: border-box; }
@@ -66,6 +66,13 @@ button { font: inherit; cursor: pointer; }
   transition: background .3s ease, box-shadow .3s ease;
 }
 .site-header.scrolled, .site-header.solid { background: rgba(18,15,11,.94); box-shadow: 0 6px 24px rgba(0,0,0,.4); backdrop-filter: blur(8px); }
+/* Gold divider line under the header once you scroll (same gold as the seeker avatars) */
+.site-header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-2) 12%, var(--gold) 50%, var(--gold-2) 88%, transparent 100%);
+  opacity: 0; transition: opacity .3s ease; pointer-events: none;
+}
+.site-header.scrolled::after, .site-header.solid::after { opacity: .85; }
 .nav { display: flex; align-items: center; gap: 1.5rem; height: 88px; }
 .brand { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
 .logo {

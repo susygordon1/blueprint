@@ -36,7 +36,7 @@
   header.innerHTML = `
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="Seeker of Story home">
-        <img class="logo-img" src="sos-logo.png" alt="SOS: Seeker of Story" width="117" height="70">
+        <img class="logo-img" src="assets/sos-logo.png" alt="SOS: Seeker of Story" width="117" height="70">
         <span class="brand-tag">A storytelling<br>community<br>for seekers</span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -68,7 +68,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="brand" href="index.html"><img class="logo-img logo-footer" src="sos-logo.png" alt="SOS: Seeker of Story" width="100" height="60"></a>
+          <a class="brand" href="index.html"><img class="logo-img logo-footer" src="assets/sos-logo.png" alt="SOS: Seeker of Story" width="100" height="60"></a>
           <p>Seeker of Story is a faith-driven community where everyday people share their stories of challenge, transformation and what's next.</p>
           <div class="socials">
             <a href="${D.settings.youtubeChannel}" aria-label="YouTube">${I.youtube}</a>

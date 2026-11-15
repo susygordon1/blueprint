@@ -92,8 +92,56 @@ window.SOS = {
         ],
         scripture: { ref: "Romans 8:28", text: "And we know that all things work together for good to them that love God." }
       } },
-    { id: "carrie-carter", name: "Carrie Carter", city: "Fort Worth, TX", headline: "Travel Tech Executive → Cowtown Tour Company", bio: "Carrie's founder story. (Bio coming soon.)", sponsored: false },
-    { id: "lena-killion", name: "Lena Killion", city: "Fort Worth, TX", headline: "Aerospace Sales → Funeral Pre-Planning Entrepreneur", bio: "Something clicked when her grandmother passed away. (Full bio coming soon.)", sponsored: true,
+    { id: "carrie-carter", name: "Carrie Carter", city: "Fort Worth, TX", type: "Founder",
+      from: "Travel Tech Executive", to: "Tour Company Founder",
+      headline: "If a door doesn't open, there is a reason. There's something else you're supposed to find.",
+      bio: "Born and raised in Fort Worth, Carrie spent 25 years in travel technology before being laid off twice in three years. Out of a season of reflection and prayer came Cowtown Tour Company, the minibus tour company Fort Worth was missing. Today she shows people from all over the world what her hometown is all about.",
+      sponsored: false,
+      business: { name: "Cowtown Tour Company", url: "https://cowtowntourco.com",
+        tagline: "Guided minibus tours of Fort Worth, so visitors see more than Cowtown.",
+        offers: ["Barbecue & Breweries", "Burgers & Breweries", "Margaritas & More", "Private tours for businesses and groups"],
+        social: "@cowtowntourco on Instagram and Facebook. DMs are the best way to reach Carrie." },
+      // DRAFT: review with Carrie before promoting.
+      story: {
+        pillars: [
+          { label: "Who she used to be", title: "A 25-year travel tech career",
+            body: [
+              "Carrie spent 25 years in the travel technology space. She started at Travelscape, the platform Expedia bought to become what it is today, then went on to Expedia, Orbitz, 12 years in Las Vegas and 12 years at Sabre. Her work covered customer development, client relations, revenue management, marketing and digital media.",
+              "Then she was laid off. It took a year to find another job, knocking on doors she thought would open and finding they wouldn't. She built and developed tools at her next job, trained everyone to use them, and essentially worked her way out of it. She was laid off twice in three years."
+            ] },
+          { label: "What she's building", title: "Cowtown Tour Company",
+            body: [
+              "Carrie launched Cowtown Tour Company and ran her first tours in September 2025. Guests board an 11-seat minibus with longhorns on the front and ride all over Fort Worth, seeing the places visitors never knew to look for.",
+              "She also runs a second business, and she's at 1 Million Cups, Fort Worth's weekly gathering for entrepreneurs, every Wednesday morning."
+            ],
+            points: ["Public tours every day: Barbecue & Breweries, Burgers & Breweries, Margaritas & More", "Private tours with custom itineraries for businesses and groups", "Guests from across the country and around the world"] },
+          { label: "Why she's building it", title: "Leading with a servant's heart",
+            body: [
+              "\"Life is too short to not have fun and to not benefit other people around you.\" For Carrie, the business is about making other people's lives better.",
+              "\"I provide memories for people. I provide experiences that people will never forget.\" Strangers from three or four different parts of the world climb on the bus, laugh, take pictures and leave as friends. And she gets to show off the city she was born and raised in."
+            ] },
+          { label: "How she's building it", title: "Reflection, prayer and a gap nobody had filled",
+            body: [
+              "After the layoffs came a quiet season of reflection and prayer. Carrie noticed that Fort Worth had a gap: no tour company that took people all around town. She sat down with AI tools, typed in what she knew and what she believed, and molded the idea into a business. When she told her friends, they said it was perfect."
+            ],
+            points: [
+              "Building on 25 years of customer and travel experience",
+              "Growing through word of mouth and social media",
+              "Showing up every week at 1 Million Cups",
+              "Choosing resilience and looking for the silver lining, even on bad days"
+            ] }
+        ],
+        quote: { text: "If a door doesn't open, there is a reason. It's because there's something else you're supposed to find. And I feel like now I'm on the path I'm supposed to be.", by: "Carrie Carter" },
+        milestones: [
+          { when: "Roots", what: "Born and raised in Fort Worth" },
+          { when: "25 years", what: "Travel tech: Travelscape, Expedia, Orbitz, 12 years in Las Vegas, 12 years at Sabre" },
+          { when: "The layoffs", what: "Laid off twice in three years. The first time, it took a year to find another job" },
+          { when: "The quiet season", what: "Reflection and prayer, and she spots the gap: Fort Worth has no tour company that takes people all around town" },
+          { when: "Sept 2025", what: "Cowtown Tour Company runs its first tours" },
+          { when: "Now", what: "Tours every day, a second business, and 1 Million Cups every Wednesday" }
+        ]
+      } },
+    { id: "lena-killion", name: "Lena Killion", city: "Fort Worth, TX", type: "Founder", headline: "Aerospace Sales → Funeral Pre-Planning Entrepreneur", bio: "Something clicked when her grandmother passed away. (Full bio coming soon.)", sponsored: true,
       sponsor: { name: "MLK Pre-Arrangements", logo: "assets/mlk-logo.png", url: "https://mlkprearrangements.com", tagline: "Funeral pre-planning so your family can grieve in peace.", address: "1617 Park Place Ave., Suite 110-MLK, Fort Worth, TX 76110", email: "lena@mlkprearrangements.com", self: true } },
     { id: "jeremy-eubanks", name: "Jeremy Eubanks", city: "Oklahoma", headline: "Two men, sobriety & a divine ride", bio: "Oil field worker who came to Fort Worth for a race right after getting clean and sober, and celebrated with a night of boot scootin' in Cowtown. (Full bio coming soon.)", sponsored: false },
     { id: "ashlan-david", name: "Ashlan David", city: "DeSoto, TX", type: "Overcomer",
@@ -172,40 +220,40 @@ window.SOS = {
     ]
   },
 
-  categories: ["Transformation", "Business", "Overcoming", "Faith", "What's Next"],
+  categories: ["Founders", "Overcomers"],
 
   stories: [
-    { id: "s1", title: "Moments: From Homeless to Surrender & Restoration", seekerId: "latoya-french", category: "Overcoming",
+    { id: "s1", title: "Moments: From Homeless to Surrender & Restoration", seekerId: "latoya-french", category: "Overcomers",
       summary: "A poetic testimony of surrender, obedience and restoration, from homeless to homebound.",
       youtubeId: "Lpi_z6UpEUc", duration: "", featured: true },
-    { id: "s2", title: "Building a Business on Faith", seekerId: "carrie-carter", category: "Business",
-      summary: "Leaving the corporate path to build something that serves the community.",
-      youtubeId: "", duration: "18:05", featured: true },
-    { id: "s11", title: "Cancer Doesn't Have Me: Ashlan's Story of Surrender & Bold Faith", seekerId: "ashlan-david", category: "Transformation",
+    { id: "s2", title: "Laid Off Twice, Then She Built Cowtown Tour Company", seekerId: "carrie-carter", category: "Founders",
+      summary: "After 25 years in travel tech and two layoffs, Carrie found the gap in her hometown and filled it.",
+      youtubeId: "Vi_55t1JOdA", duration: "", featured: true },
+    { id: "s11", title: "Cancer Doesn't Have Me: Ashlan's Story of Surrender & Bold Faith", seekerId: "ashlan-david", category: "Overcomers",
       summary: "Diagnosed with stage 2 breast cancer in 2022, Ashlan stood on Psalm 91 and walked boldly into her healing.",
       youtubeId: "JhAKrqzEwOM", duration: "", featured: true },
-    { id: "s4", title: "Starting Over at 50", seekerId: "angela-t", category: "What's Next",
+    { id: "s4", title: "Starting Over at 50", seekerId: "angela-t", category: "Overcomers",
       summary: "It's never too late to write the next chapter.",
       youtubeId: "", duration: "14:10" },
-    { id: "s5", title: "Grace in the Waiting Room", seekerId: "maria-l", category: "Faith",
+    { id: "s5", title: "Grace in the Waiting Room", seekerId: "maria-l", category: "Overcomers",
       summary: "Finding peace while the answers were still on the way.",
       youtubeId: "", duration: "11:48" },
-    { id: "s6", title: "From Side Hustle to Calling", seekerId: "james-r", category: "Business",
+    { id: "s6", title: "From Side Hustle to Calling", seekerId: "james-r", category: "Founders",
       summary: "Turning a weekend idea into work that matters.",
       youtubeId: "", duration: "16:30" },
-    { id: "s7", title: "Breaking the Cycle", seekerId: "david-m", category: "Overcoming",
+    { id: "s7", title: "Breaking the Cycle", seekerId: "david-m", category: "Overcomers",
       summary: "Choosing a different story for the next generation.",
       youtubeId: "", duration: "13:02" },
-    { id: "s8", title: "Lost, Then Launched", seekerId: "angela-t", category: "Transformation",
+    { id: "s8", title: "Lost, Then Launched", seekerId: "angela-t", category: "Overcomers",
       summary: "The long road from wandering to walking with purpose.",
       youtubeId: "", duration: "10:55" },
-    { id: "s9", title: "What I'd Tell My Younger Self", seekerId: "angela-t", category: "What's Next",
+    { id: "s9", title: "What I'd Tell My Younger Self", seekerId: "angela-t", category: "Overcomers",
       summary: "Hard-won wisdom for anyone standing at a crossroads.",
       youtubeId: "", duration: "8:47" },
-    { id: "s10", title: "Two Men, Sobriety & a Divine Ride", seekerId: "jeremy-eubanks", category: "Overcoming",
+    { id: "s10", title: "Two Men, Sobriety & a Divine Ride", seekerId: "jeremy-eubanks", category: "Overcomers",
       summary: "Freshly clean and sober, two men from the Oklahoma oil fields come to Fort Worth to race, and celebrate in Cowtown.",
       youtubeId: "", duration: "14:14" },
-    { id: "s3", title: "From Aerospace to Peace of Mind", seekerId: "lena-killion", category: "Transformation",
+    { id: "s3", title: "From Aerospace to Peace of Mind", seekerId: "lena-killion", category: "Founders",
       summary: "Something clicked when her grandmother passed away. From aerospace sales to helping families with funeral pre-planning.",
       youtubeId: "", duration: "" }
   ],

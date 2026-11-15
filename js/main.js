@@ -242,7 +242,7 @@
     return `
       <section class="section-light story-pillars"><div class="container">
         <p class="kicker">${first}'s story</p>
-        <h2 class="pillars-title">${esc(st.pillarsTitle || "From where she was to what she's building")}</h2>
+        <h2 class="pillars-title">${esc(st.pillarsTitle || (sk.type === "Founder" ? "Who she was, what she's building, why and how" : "From where she was to what she's building"))}</h2>
         <div class="pillar-grid">${pillars}</div>
       </div></section>
       ${st.quote ? `<section class="pull-quote"><div class="container reveal">
@@ -289,6 +289,17 @@
             <div><p class="kicker">${mine.length} ${mine.length === 1 ? "story" : "stories"}</p>
               <div class="grid grid-2">${mine.map(storyCard).join("")}</div></div>
           </div>
+          ${sk.business && !sk.sponsor ? `
+          <aside class="sponsor-spot reveal">
+            <div>
+              <p class="kicker">${esc(sk.name.split(" ")[0])}'s business</p>
+              <h3>${esc(sk.business.name)}</h3>
+              ${sk.business.tagline ? `<p>${esc(sk.business.tagline)}</p>` : ""}
+              ${sk.business.offers ? `<ul class="sponsor-info">${sk.business.offers.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>` : ""}
+              ${sk.business.social ? `<p class="biz-social">${esc(sk.business.social)}</p>` : ""}
+            </div>
+            ${sk.business.url ? `<a class="btn btn-gold" href="${esc(sk.business.url)}" target="_blank" rel="noopener">Visit ${esc(sk.business.name)} →</a>` : ""}
+          </aside>` : ""}
           ${sk.sponsor ? `
           <aside class="sponsor-spot reveal">
             <div>

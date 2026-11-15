@@ -227,6 +227,40 @@
       <button class="btn ${t.featured ? "btn-gold" : "btn-ghost"}" data-give="${esc(t.name)}">${esc(t.cta)}</button>
     </div>`).join("");
 
+  // Seeker of Story pillars: who they were, what they're building, why, how
+  function storyBlocks(sk) {
+    const st = sk.story; if (!st) return "";
+    const first = esc(sk.name.split(" ")[0]);
+    const pillars = (st.pillars || []).map((p, i) => `
+      <article class="sp-pillar reveal">
+        <span class="sp-pillar-num">0${i + 1}</span>
+        <p class="kicker">${esc(p.label)}</p>
+        <h3>${esc(p.title)}</h3>
+        ${(p.body || []).map((t) => `<p>${esc(t)}</p>`).join("")}
+        ${p.points ? `<ul class="sp-pillar-points">${p.points.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+      </article>`).join("");
+    return `
+      <section class="section-light story-pillars"><div class="container">
+        <p class="kicker">${first}'s story</p>
+        <h2 class="pillars-title">${esc(st.pillarsTitle || "From where she was to what she's building")}</h2>
+        <div class="pillar-grid">${pillars}</div>
+      </div></section>
+      ${st.quote ? `<section class="pull-quote"><div class="container reveal">
+        <blockquote>"${esc(st.quote.text)}"</blockquote><p class="quote-by">${esc(st.quote.by)}</p>
+      </div></section>` : ""}
+      ${st.writing ? `<section class="section-light writing"><div class="container narrow reveal">
+        <p class="kicker">${esc(st.writing.kicker || "In her own words")}</p><h2>${esc(st.writing.title)}</h2>
+        ${st.writing.intro ? `<p class="writing-intro">${esc(st.writing.intro)}</p>` : ""}
+        <div class="poem">${st.writing.lines.map((l) => `<p>${esc(l)}</p>`).join("")}</div>
+        <p class="poem-credit">${esc(st.writing.credit)}</p>
+      </div></section>` : ""}
+      ${st.milestones ? `<section class="milestones"><div class="container">
+        <p class="kicker">The blueprint</p><h2>How ${first} got to the other side</h2>
+        <ol class="timeline">${st.milestones.map((m) => `<li class="reveal"><span class="when">${esc(m.when)}</span><span class="what">${esc(m.what)}</span></li>`).join("")}</ol>
+        ${st.scripture ? `<p class="scripture">"${esc(st.scripture.text)}" <span>${esc(st.scripture.ref)}</span></p>` : ""}
+      </div></section>` : ""}`;
+  }
+
   // Profile page
   const profileEl = document.getElementById("profile");
   if (profileEl) {
@@ -240,8 +274,11 @@
           ${avatar(sk, "xl")}
           <h1>${esc(sk.name)}</h1>
           <p class="city">${esc(sk.city)}${sk.sponsored ? ` · <span class="badge">${sk.sponsor ? "Story sponsored by " + esc(sk.sponsor.name) : "Story sponsored by the community"}</span>` : ""}</p>
+          ${sk.from && sk.to ? `<p class="journey-big"><span>${esc(sk.from)}</span><b aria-hidden="true">→</b><span>${esc(sk.to)}</span></p>` : ""}
           <p class="profile-headline">"${esc(sk.headline)}"</p>
+          ${sk.evidenceCap ? `<p class="evidence-badge">I Am the Evidence · Cap #${esc(sk.evidenceCap)}</p>` : ""}
         </div></header>
+        ${storyBlocks(sk)}
         <section class="section-light"><div class="container">
           <div class="profile-grid">
             <div><p class="kicker">About</p><p class="lead">${esc(sk.bio)}</p>

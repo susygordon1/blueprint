@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Seeker of Story</title>
+  <meta name="description" content="Seeker of Story is a faith-driven storytelling community from Mega Mission Media.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+<main>
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Our story</p>
+      <h1>Why we <span class="script">tell stories</span></h1>
+      <p>Because somebody, somewhere, needs to hear what you've been through.</p>
+    </div>
+  </header>
+  <section class="section-light">
+    <div class="container split">
+      <div class="reveal">
+        <p class="kicker">Our mission</p>
+        <h2>Real stories change real lives.</h2>
+        <p class="lead">Seeker of Story is a faith-driven storytelling community where everyday people share what they've been through: the challenges, the transformation, and what's next.</p>
+        <p class="lead">We believe your story isn't just yours. It's a lifeline for the next person who's lost and looking. When we tell the truth about where we've been, we light the path for someone else.</p>
+      </div>
+      <div class="art-box reveal">
+        <div><span class="logo" style="font-size:5rem;justify-content:center" id="aboutLogo">SOS</span>
+        <p class="eyebrow" style="margin-top:1rem;letter-spacing:.35em">From lost to launched</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><div><p class="kicker">What we believe</p><h2>Our values</h2></div></div>
+      <div class="grid grid-4">
+        <div class="feature reveal"><h3>Honesty</h3><p>No filters, no performance. Just the real story.</p></div>
+        <div class="feature reveal"><h3>Faith</h3><p>We believe God redeems every chapter, even the hard ones.</p></div>
+        <div class="feature reveal"><h3>Dignity</h3><p>Every seeker is treated with respect and every story with care.</p></div>
+        <div class="feature reveal"><h3>Momentum</h3><p>Stories aren't just about the past. They're about what's next.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark2">
+    <div class="container split">
+      <div class="art-box reveal" style="aspect-ratio:1/1;max-width:420px">
+        <p class="ph-label" style="font-family:var(--serif);opacity:.8">Founder photo<br>coming soon</p>
+      </div>
+      <div class="reveal">
+        <p class="kicker">Meet the founder</p>
+        <h2>Susy Gordon</h2>
+        <p class="lead">Entrepreneur, author, minister and storyteller. Susy founded Seeker of Story as part of the Mega Mission Media family to give everyday people a platform to share how faith carried them from lost to launched.</p>
+        <p class="lead"><em>Placeholder bio — replace with your own words.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light" id="contact">
+    <div class="container split">
+      <div>
+        <p class="kicker">Get in touch</p>
+        <h2>Let's talk.</h2>
+        <p class="lead">Questions, partnerships, speaking requests or press. We'd love to hear from you.</p>
+        <p class="lead">Email: <strong id="contactEmail"></strong></p>
+      </div>
+      <div class="form-card">
+        <form class="form" data-form="contact" novalidate>
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          <label>Topic
+            <select name="topic"><option>General question</option><option>Partnership</option><option>Speaking request</option><option>Press</option><option>Suggest a resource</option></select>
+          </label>
+          <label>Message<textarea name="message" required></textarea></label>
+          <button class="btn btn-gold" type="submit">Send message</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>document.addEventListener("DOMContentLoaded",()=>{document.getElementById("contactEmail").textContent=window.SOS.settings.email;});</script>
+</main>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -537,3 +537,5 @@ section[id] { scroll-margin-top: 150px; }
 .scripture span { font-style: normal; font-family: var(--sans); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-left: .4rem; }
 @media (max-width: 900px) { .pillar-grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .timeline li { grid-template-columns: 1fr; gap: .2rem; } .sp-pillar { padding: 1.6rem 1.3rem; } }
+
+.biz-social { margin-top: .6rem !important; color: var(--gold-soft) !important; font-weight: 600; letter-spacing: .05em; }

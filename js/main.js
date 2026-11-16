@@ -216,7 +216,32 @@
 
   // Seekers (home)
   const seekerGrid = document.getElementById("seekerGrid");
-  if (seekerGrid) seekerGrid.innerHTML = (D.seekers || []).slice(0, 4).map(seekerCard).join("");
+  if (seekerGrid) {
+    const biz = (D.seekers || []).filter((x) => x.spotlight);
+    const cards = biz.map((sk) => {
+      const sp = sk.sponsor || sk.business || {};
+      const tel = sp.phone ? sp.phone.replace(/[^0-9+]/g, "") : "";
+      return `<div class="seeker-card biz-card reveal">
+        ${avatar(sk, "lg")}
+        <span class="tag">${esc(sk.service || "")}</span>
+        <h3>${esc(sk.name)}</h3>
+        <span class="city">${esc(sp.name || "")}${sk.city ? " · " + esc(sk.city) : ""}</span>
+        <p>"${esc(sk.headline)}"</p>
+        <div class="biz-actions">
+          ${tel ? `<a class="btn btn-gold btn-sm" href="tel:${tel}">Call ${esc(sk.name.split(" ")[0])}</a>` : (sp.url ? `<a class="btn btn-gold btn-sm" href="${esc(sp.url)}" target="_blank" rel="noopener">Visit</a>` : "")}
+          <a class="btn btn-ghost btn-sm" href="profile.html#${sk.id}">Watch the story</a>
+        </div>
+        ${sp.phone ? `<span class="seeker-foot">${esc(sp.phone)}</span>` : ""}
+      </div>`;
+    });
+    while (cards.length < 4) cards.push(`<a class="seeker-card tbd-card reveal" href="share.html">
+        <span class="avatar lg tbd-avatar" aria-hidden="true">+</span>
+        <h3>TBD</h3>
+        <span class="city">This spot could be yours</span>
+        <span class="seeker-foot">Become a featured founder →</span>
+      </a>`);
+    seekerGrid.innerHTML = cards.join("");
+  }
 
   // Giving tiers
   const tiersEl = document.getElementById("givingTiers");

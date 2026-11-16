@@ -142,6 +142,7 @@ window.SOS = {
         ]
       } },
     { id: "lena-killion", name: "Lena Killion", city: "Fort Worth, TX", type: "Founder",
+      spotlight: true, service: "Funeral Pre-Planning",
       from: "Aerospace Purchasing", to: "Pre-Need Founder",
       headline: "We're leaving a legacy to our children, not debt.",
       bio: "Theater major, construction pro, stay-at-home mom, first-place bodybuilder and aerospace buyer. When her grandmother passed and left her family a plan instead of a burden, Lena found her calling. Today she owns MLK Pre-Arrangements, helping families across Texas and beyond plan ahead, compare funeral homes and keep their power at the hardest moment of their lives.",

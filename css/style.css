@@ -542,3 +542,14 @@ section[id] { scroll-margin-top: 150px; }
 
 .hero-verse { margin: 1.2rem auto 1.8rem; max-width: 620px; font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--cream); opacity: .85; text-align: center; }
 .hero-verse span { font-style: normal; font-family: var(--sans); font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-left: .35rem; white-space: nowrap; }
+
+/* Services From Our Community */
+.section-sub { color: var(--muted); max-width: 620px; margin: .6rem 0 0; }
+.biz-card .tag { margin-bottom: .4rem; }
+.biz-actions { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center; margin: .4rem 0 .6rem; }
+.btn-sm { padding: .55rem 1rem; font-size: .85rem; }
+.tbd-card { border: 1.5px dashed var(--line); background: transparent; justify-content: center; }
+.tbd-card h3 { color: var(--muted); letter-spacing: .15em; }
+.tbd-avatar { background: transparent !important; color: var(--gold) !important; border: 1.5px dashed var(--line); box-shadow: none !important; font-family: var(--sans); font-weight: 300; }
+.tbd-card .seeker-foot { color: var(--gold); margin-top: .8rem; }
+.spotlight-note { margin-top: 1.4rem; font-size: .8rem; color: var(--muted-2); text-align: center; }

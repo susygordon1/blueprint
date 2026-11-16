@@ -141,8 +141,70 @@ window.SOS = {
           { when: "Now", what: "Tours every day, a second business, and 1 Million Cups every Wednesday" }
         ]
       } },
-    { id: "lena-killion", name: "Lena Killion", city: "Fort Worth, TX", type: "Founder", headline: "Aerospace Sales → Funeral Pre-Planning Entrepreneur", bio: "Something clicked when her grandmother passed away. (Full bio coming soon.)", sponsored: true,
-      sponsor: { name: "MLK Pre-Arrangements", logo: "assets/mlk-logo.png", url: "https://mlkprearrangements.com", tagline: "Funeral pre-planning so your family can grieve in peace.", address: "1617 Park Place Ave., Suite 110-MLK, Fort Worth, TX 76110", email: "lena@mlkprearrangements.com", self: true } },
+    { id: "lena-killion", name: "Lena Killion", city: "Fort Worth, TX", type: "Founder",
+      from: "Aerospace Purchasing", to: "Pre-Need Founder",
+      headline: "We're leaving a legacy to our children, not debt.",
+      bio: "Theater major, construction pro, stay-at-home mom, first-place bodybuilder and aerospace buyer. When her grandmother passed and left her family a plan instead of a burden, Lena found her calling. Today she owns MLK Pre-Arrangements, helping families across Texas and beyond plan ahead, compare funeral homes and keep their power at the hardest moment of their lives.",
+      sponsored: true,
+      sponsor: { name: "MLK Pre-Arrangements", logo: "assets/mlk-logo.png", url: "https://mlkprearrangements.com", tagline: "Funeral pre-planning so your family can grieve in peace.", address: "1617 Park Place Ave., Suite 110-MLK, Fort Worth, TX 76110", email: "lena@mlkprearrangements.com", phone: "(682) 552-6501", self: true },
+      // DRAFT: review with Lena before promoting.
+      story: {
+        pillars: [
+          { label: "Who she used to be", title: "A big life, and a calm, profitable, boring job",
+            body: [
+              "Lena has lived a big life. A theater major, she did well in construction, where there weren't many women and even fewer Black women. She was in Glamour magazine at 28, danced ballroom, and spent 11 years as a stay-at-home mom raising her sons.",
+              "While her boys were in school, she decided to see if she could win on a bodybuilding stage. Her first time out she took second place. A year later, she won first place in two categories.",
+              "After her divorce, as a single mom, she worked in aerospace purchasing with major helicopter and defense suppliers. It was calm, profitable and boring. She wanted something meaningful, something of her own."
+            ] },
+          { label: "What she's building", title: "MLK Pre-Arrangements",
+            body: [
+              "Lena's company works like a shopping mall for pre-need funeral planning. Instead of being locked into one funeral home, families can compare dozens of locations and choose what fits their wishes and their budget. A pre-need plan locks in today's pricing, with no interest, no down payment and payments over 3, 5 or 10 years."
+            ],
+            points: [
+              "Free planning conversations: cremation or burial, pricing and options",
+              "Headstones and markers, including for unmarked graves, often for a fraction of the quoted price",
+              "Medical and durable powers of attorney and HIPAA forms, notarized on the spot for free",
+              "Licensed to help families in Texas and several other states",
+              "Presentations for churches and businesses, plus a speed-networking event"
+            ] },
+          { label: "Why she's building it", title: "A plan instead of a burden",
+            body: [
+              "When Lena's grandmother passed, she left no burden. She had life insurance and a pre-need plan, so no one argued over the funeral home or the headstone. \"My grandma was a beautiful example of how we should all live our lives.\"",
+              "Later, working at one of the largest funeral homes in DFW, Lena watched families get caught at their lowest moment, with no discounts and no payment plans. If they couldn't afford it, they had to leave, and she couldn't even tell them the place down the block was thousands cheaper. \"That hurt me more than anything.\" She wants no family to need a GoFundMe. \"This is not sales for me.\""
+            ] },
+          { label: "How she's building it", title: "Signs, grit and a tether to God",
+            body: [
+              "COVID changed how Lena saw things. Then a headhunter called out of nowhere about a funeral job. She said no: it was 100% commission, and she was a single mom. Two months later the same recruiter called back. \"My grandma must be giving me a sign.\" She took the job, immersed herself in the business, and when she'd seen enough, she walked out and built her own."
+            ],
+            points: [
+              "Caring about people more than the check",
+              "Bringing the same competitive drive that won her first place on stage",
+              "Networking everywhere, from churches to businesses to radio",
+              "Asking God for what she wants, then being still and waiting"
+            ] }
+        ],
+        quote: { text: "My tether is to God. God is my foundation. When I feel like I'm running in circles, there's a tether, and I always bounce back.", by: "Lena Killion" },
+        writing: {
+          kicker: "Her word to anyone in transition", title: "Sit With Yourself", credit: "Lena Killion",
+          intro: "Lena's advice for anyone laid off, burned out or figuring out what's next.",
+          lines: [
+            "Sit with yourself and ask: is there something I have a passion for?",
+            "Is there something I can create in this life for myself, and make it for the betterment of other people?",
+            "Don't give up. Get up and go do something.",
+            "Network. Networking isn't just for business owners. It's for you as an individual trying to figure it out.",
+            "Do not fear. Something good is out there. Just hold on, and get yourself in the right places."
+          ]
+        },
+        milestones: [
+          { when: "Growing up", what: "Raised in Bryan–College Station, in church, singing with a traveling gospel group" },
+          { when: "Early career", what: "Theater major who made her mark in construction" },
+          { when: "Mom years", what: "11 years as a stay-at-home mom, and first place on the bodybuilding stage" },
+          { when: "Aerospace", what: "Purchasing for major helicopter and defense suppliers" },
+          { when: "The sign", what: "Her grandmother passes with a plan in place. A headhunter calls twice, and Lena takes a funeral home job" },
+          { when: "The walk-out", what: "Tired of families being turned away, she leaves and starts MLK Pre-Arrangements" },
+          { when: "Now", what: "Helping families plan ahead across Texas and beyond, on radio, in churches and in businesses" }
+        ]
+      } },
     { id: "jeremy-eubanks", name: "Jeremy Eubanks", city: "Oklahoma", headline: "Two men, sobriety & a divine ride", bio: "Oil field worker who came to Fort Worth for a race right after getting clean and sober, and celebrated with a night of boot scootin' in Cowtown. (Full bio coming soon.)", sponsored: false },
     { id: "ashlan-david", name: "Ashlan David", city: "DeSoto, TX", type: "Overcomer",
       from: "Stage 2 Breast Cancer", to: "Cancer-Free",
@@ -254,8 +316,8 @@ window.SOS = {
       summary: "Freshly clean and sober, two men from the Oklahoma oil fields come to Fort Worth to race, and celebrate in Cowtown.",
       youtubeId: "", duration: "14:14" },
     { id: "s3", title: "From Aerospace to Peace of Mind", seekerId: "lena-killion", category: "Founders",
-      summary: "Something clicked when her grandmother passed away. From aerospace sales to helping families with funeral pre-planning.",
-      youtubeId: "", duration: "" }
+      summary: "Her grandmother left a plan instead of a burden. Now Lena helps families do the same, and keeps the funeral homes from catching them at their lowest.",
+      youtubeId: "lypBfW6ai_M", duration: "" }
   ],
 
   episodes: [

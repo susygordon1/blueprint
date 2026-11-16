@@ -309,6 +309,7 @@
               <ul class="sponsor-info">
                 ${sk.sponsor.address ? `<li>${esc(sk.sponsor.address)}</li>` : ""}
                 ${sk.sponsor.email ? `<li>${esc(sk.sponsor.email)}</li>` : ""}
+                ${sk.sponsor.phone ? `<li>${esc(sk.sponsor.phone)}</li>` : ""}
               </ul>
             </div>
             <a class="btn btn-gold" href="${esc(sk.sponsor.url)}" target="_blank" rel="noopener">Visit ${esc(sk.sponsor.name)} →</a>

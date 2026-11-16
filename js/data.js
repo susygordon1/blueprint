@@ -291,9 +291,9 @@ window.SOS = {
     { id: "s2", title: "Laid Off Twice, Then She Built Cowtown Tour Company", seekerId: "carrie-carter", category: "Founders",
       summary: "After 25 years in travel tech and two layoffs, Carrie found the gap in her hometown and filled it.",
       youtubeId: "Vi_55t1JOdA", duration: "", featured: true },
-    { id: "s11", title: "Cancer Doesn't Have Me: Ashlan's Story of Surrender & Bold Faith", seekerId: "ashlan-david", category: "Overcomers",
-      summary: "Diagnosed with stage 2 breast cancer in 2022, Ashlan stood on Psalm 91 and walked boldly into her healing.",
-      youtubeId: "JhAKrqzEwOM", duration: "", featured: true },
+    { id: "s3", title: "From Aerospace to Peace of Mind", seekerId: "lena-killion", category: "Founders",
+      summary: "Her grandmother left a plan instead of a burden. Now Lena helps families do the same, and keeps the funeral homes from catching them at their lowest.",
+      youtubeId: "lypBfW6ai_M", duration: "", featured: true },
     { id: "s4", title: "Starting Over at 50", seekerId: "angela-t", category: "Overcomers",
       summary: "It's never too late to write the next chapter.",
       youtubeId: "", duration: "14:10" },
@@ -315,9 +315,9 @@ window.SOS = {
     { id: "s10", title: "Two Men, Sobriety & a Divine Ride", seekerId: "jeremy-eubanks", category: "Overcomers",
       summary: "Freshly clean and sober, two men from the Oklahoma oil fields come to Fort Worth to race, and celebrate in Cowtown.",
       youtubeId: "", duration: "14:14" },
-    { id: "s3", title: "From Aerospace to Peace of Mind", seekerId: "lena-killion", category: "Founders",
-      summary: "Her grandmother left a plan instead of a burden. Now Lena helps families do the same, and keeps the funeral homes from catching them at their lowest.",
-      youtubeId: "lypBfW6ai_M", duration: "" }
+    { id: "s11", title: "Cancer Doesn't Have Me: Ashlan's Story of Surrender & Bold Faith", seekerId: "ashlan-david", category: "Overcomers",
+      summary: "Diagnosed with stage 2 breast cancer in 2022, Ashlan stood on Psalm 91 and walked boldly into her healing.",
+      youtubeId: "JhAKrqzEwOM", duration: "" }
   ],
 
   episodes: [

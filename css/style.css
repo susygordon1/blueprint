@@ -539,3 +539,6 @@ section[id] { scroll-margin-top: 150px; }
 @media (max-width: 600px) { .timeline li { grid-template-columns: 1fr; gap: .2rem; } .sp-pillar { padding: 1.6rem 1.3rem; } }
 
 .biz-social { margin-top: .6rem !important; color: var(--gold-soft) !important; font-weight: 600; letter-spacing: .05em; }
+
+.hero-verse { margin: 1.2rem auto 1.8rem; max-width: 620px; font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--cream); opacity: .85; text-align: center; }
+.hero-verse span { font-style: normal; font-family: var(--sans); font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-left: .35rem; white-space: nowrap; }

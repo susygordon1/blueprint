@@ -180,7 +180,7 @@
       ? `<iframe src="https://www.youtube-nocookie.com/embed/${item.youtubeId}?autoplay=1&rel=0" title="${esc(item.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
       : `<div class="ph"><h3 style="color:var(--cream)">Video coming soon</h3><p>This story will play here once its YouTube video is connected.</p></div>`;
     document.getElementById("videoInfo").innerHTML =
-      `<span class="tag">${esc(item.category || "Podcast · Episode " + item.number)}</span><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>`;
+      `<span class="tag">${esc(item.category || "The Evidence Show · Episode " + item.number)}</span><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>`;
     openModal("videoModal");
   }
 
@@ -302,6 +302,7 @@
           ${sk.from && sk.to ? `<p class="journey-big"><span>${esc(sk.from)}</span><b aria-hidden="true">→</b><span>${esc(sk.to)}</span></p>` : ""}
           <p class="profile-headline">"${esc(sk.headline)}"</p>
           ${sk.evidenceCap ? `<p class="evidence-badge">I Am the Evidence · Cap #${esc(sk.evidenceCap)}</p>` : ""}
+          ${sk.listen ? `<div class="hero-ctas" style="margin-top:1.4rem"><a class="btn btn-gold" href="${esc(sk.listen.url)}" target="_blank" rel="noopener">${I.play.replace("<svg", '<svg width="14" height="14"')} ${esc(sk.listen.label)}</a></div>` : ""}
         </div></header>
         ${storyBlocks(sk)}
         <section class="section-light"><div class="container">
@@ -311,8 +312,11 @@
                 <button class="btn btn-dark" data-give="Encourage ${esc(sk.name)}">Encourage ${esc(sk.name.split(" ")[0])}</button>
                 <button class="btn btn-ghost dark-ghost" data-copy-link>Share profile</button>
               </div></div>
-            <div><p class="kicker">${mine.length} ${mine.length === 1 ? "story" : "stories"}</p>
-              <div class="grid grid-2">${mine.map(storyCard).join("")}</div></div>
+            ${mine.length ? `<div><p class="kicker">${mine.length} ${mine.length === 1 ? "story" : "stories"}</p>
+              <div class="grid grid-2">${mine.map(storyCard).join("")}</div></div>`
+            : sk.listen ? `<div><p class="kicker">Listen</p><h3 style="margin:.2rem 0 .6rem">${esc(sk.listen.title || "")}</h3>
+              <p>${esc(sk.listen.note || "")}</p>
+              <a class="btn btn-dark" style="margin-top:1rem" href="${esc(sk.listen.url)}" target="_blank" rel="noopener">${esc(sk.listen.label)}</a></div>` : ""}
           </div>
           ${sk.business && !sk.sponsor ? `
           <aside class="sponsor-spot reveal">
@@ -375,7 +379,9 @@
     <article class="episode reveal">
       <div class="ep-num">${String(e.number).padStart(2, "0")}<small>EPISODE</small></div>
       <div><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p><span class="res-type">${esc(e.duration)} · ${esc(e.date)}</span></div>
-      <button class="btn btn-gold btn-sm" data-play="${e.id}">${I.play.replace("<svg", '<svg width="14" height="14"')} Listen</button>
+      ${e.url ? `<a class="btn btn-gold btn-sm" href="${esc(e.url)}" target="_blank" rel="noopener">${I.play.replace("<svg", '<svg width="14" height="14"')} Listen</a>`
+        : e.youtubeId ? `<button class="btn btn-gold btn-sm" data-play="${e.id}">${I.play.replace("<svg", '<svg width="14" height="14"')} Listen</button>`
+        : `<span class="btn btn-ghost btn-sm" aria-disabled="true">Link coming soon</span>`}
     </article>`).join("");
   document.querySelectorAll("[data-platform]").forEach((a) => { a.href = D.settings.podcastLinks[a.dataset.platform] || "#"; });
   document.querySelectorAll("[data-youtube]").forEach((a) => { a.href = D.settings.youtubeChannel; });
@@ -409,7 +415,7 @@
   /* ---------- Search ---------- */
   const index = [
     ...D.stories.map((s) => ({ type: "Story", title: s.title, text: s.summary, play: s.id })),
-    ...D.episodes.map((e) => ({ type: "Podcast", title: e.title, text: e.summary, play: e.id })),
+    ...D.episodes.map((e) => ({ type: "The Evidence Show", title: e.title, text: e.summary, play: e.id })),
     ...D.resources.map((r) => ({ type: "Resource", title: r.title, text: r.summary, href: "community.html#resources" })),
     { type: "Page", title: "Our Story", text: "About Seeker of Story and our founder", href: "about.html" },
     { type: "Page", title: "Events", text: "Story Nights, Seeker Circles and workshops", href: "community.html#events" },
@@ -449,7 +455,12 @@
       const btn = form.querySelector("[type=submit]"); btn.disabled = true;
       try {
         if (endpoint) {
-          const r = await fetch(endpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+          const fd = new FormData(form);
+          const label = { story: "Share Your Story", newsletter: "Newsletter Signup", community: "Join the Community", contact: "Contact", giving: "Giving" }[kind] || kind;
+          fd.append("form_name", label);
+          fd.append("_subject", "Seeker of Story: " + label);
+          if (fd.get("email")) fd.append("_replyto", fd.get("email"));
+          const r = await fetch(endpoint, { method: "POST", body: fd, headers: { Accept: "application/json" } });
           if (!r.ok) throw new Error("bad status");
         }
         msg.textContent = {
@@ -462,7 +473,7 @@
         msg.classList.add("show"); form.reset();
         if (kind === "story") try { localStorage.removeItem(DRAFT_KEY); } catch (_) {}
       } catch (_) {
-        msg.textContent = `Something went wrong sending that. Please try again, or email us at ${D.settings.email}.`;
+        msg.textContent = "Something went wrong sending that. Please try again in a moment.";
         msg.classList.add("show", "err");
       } finally { btn.disabled = false; }
     });

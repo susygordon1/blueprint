@@ -11,7 +11,7 @@ window.SOS = {
     email: "hello@seekerofstory.org",                            // TODO: confirm inbox
     // Paste a form endpoint (e.g. Formspree, Make, Zapier webhook) to receive submissions.
     // Leave "" and forms will show a confirmation without sending anywhere.
-    formEndpoints: { story: "", newsletter: "", community: "", contact: "", giving: "" },
+    formEndpoints: { story: "https://formspree.io/f/maeoovrq", newsletter: "https://formspree.io/f/maeoovrq", community: "https://formspree.io/f/maeoovrq", contact: "https://formspree.io/f/maeoovrq", giving: "https://formspree.io/f/maeoovrq" },
     podcastLinks: {
       spotify: "#", apple: "#", youtube: "#"                     // TODO: add show links
     }
@@ -20,6 +20,75 @@ window.SOS = {
   // Seeker profiles (SAMPLE people — replace with real storytellers)
   // Each seeker gets a profile page; their stories link back to them.
   seekers: [
+    { id: "susy-gordon", name: "Susy Gordon", city: "Fort Worth, TX", type: "Founder",
+      from: "Corporate Consultant", to: "Founder & Storyteller",
+      headline: "Purpose leaves clues. Stories carry strategy.",
+      bio: "Founder of Mega Mission Media, creator of Seeker of Story and host of The Evidence Show. After 25+ years in corporate strategy and a decade in broadcast media, Susy left it all in June 2025 to follow God's call. She turned her car into a ministry, listening to the stories of the people she drives, and built a community where those stories, and the blueprints behind them, are free for every seeker.",
+      sponsored: false,
+      listen: { url: "https://www.buzzsprout.com/2617145/episodes/19246881-susy-gordon-in-pursuit-of-purpose-from-lost-to-launched", label: "Listen to her story", title: "In Pursuit of Purpose, From Lost to Launched", note: "On The Evidence Show, Susy shares her own evidence and her blueprint from lost to launched." },
+      business: { name: "Mega Mission Media", url: "https://megamissionmedia.com",
+        tagline: "Media with a mission. Websites, digital presence and show production for founders and businesses.",
+        offers: ["Websites and digital presence", "Podcast and video production", "AI adoption for small businesses", "Producer of The Evidence Show and Seeker of Story"] },
+      // DRAFT: Susy to review before promoting.
+      story: {
+        pillars: [
+          { label: "Who she used to be", title: "Lost, then successful, but still searching",
+            body: [
+              "Before the career and the titles, Susy walked through addiction and homelessness. God pulled her out, and she never forgot it.",
+              "She went on to build a big career: about a decade in broadcasting, including master control for major TV and radio networks, then 25+ years in corporate consulting, IT business analysis, project management, agile coaching and director-level strategy and business transformation. From the outside, she had arrived. Inside, she knew there was more."
+            ] },
+          { label: "What she's building", title: "A community built on evidence",
+            body: [
+              "Susy is building an ecosystem with one mission: help people move from lost to launched."
+            ],
+            points: [
+              "Seeker of Story: a free platform of real stories and founder blueprints, with no fees, subscriptions or paywalls",
+              "The Evidence Show: her podcast about faith, her own evidence and other people's evidence",
+              "Mega Mission Media: websites, digital presence and AI adoption for businesses, with a vision of a studio where people record and produce their own shows",
+              "Ministry with people experiencing homelessness, including a Friday night fellowship",
+              "Someday: Seeker of Story brick-and-mortar locations"
+            ] },
+          { label: "Why she's building it", title: "A promise she's keeping",
+            body: [
+              "When she was at the bottom, Susy made God a promise: if He delivered her, she would tell every soul she came across what He had done in her life. He kept His promise. Seeker of Story and The Evidence Show are her keeping hers.",
+              "She also believes stories are more than inspiration. \"Purpose leaves clues, stories carry strategy.\" When someone shares how they got through, the next person gets a blueprint."
+            ] },
+          { label: "How she's building it", title: "One ride, one story, one step of faith at a time",
+            body: [
+              "On a walk along the Trinity Trail in Fort Worth, Susy heard \"Seek and Find\" three times. In June 2025, she left her corporate career to follow that call. Rideshare driving funds the dream, and her car became the studio: she prays before she drives for God to send the people she needs to talk to, and records their stories with their permission."
+            ],
+            points: [
+              "Driving rideshare to fund the mission and meet the next storyteller",
+              "Networking every week at 1 Million Cups Fort Worth, now as an alumna",
+              "Studying the Word for herself, writing scripture from Genesis on, because God is her teacher",
+              "Building with modern tools, including AI, to do more with less",
+              "Leading with genuine relationships, never fake"
+            ] }
+        ],
+        quote: { text: "If and when You deliver me, I will tell every single soul I come across what You've done in my life. He kept His promise, and this is me keeping mine.", by: "Susy Gordon" },
+        writing: {
+          kicker: "Her blueprint", title: "From Lost to Launched", credit: "Susy Gordon",
+          intro: "Susy's practical advice for anyone in transition, from The Evidence Show.",
+          lines: [
+            "Get a rideshare account. It keeps the lights on while you figure it out, and it puts people in your path.",
+            "Keep a small cash reserve, around $300, so one bad week doesn't stop you.",
+            "Carry a notepad and write down every person you meet.",
+            "Go to networking events, even if you don't have a business idea yet.",
+            "Purpose leaves clues. Follow them."
+          ]
+        },
+        milestones: [
+          { when: "The hard season", what: "Addiction and homelessness, and a God who pulled her out" },
+          { when: "Media", what: "About a decade in broadcasting, including master control for major networks" },
+          { when: "Corporate", what: "25+ years in consulting, strategy and business transformation" },
+          { when: "The car", what: "Rideshare driving turns her car into a place for stories and prayer" },
+          { when: "The trail", what: "\"Seek and Find,\" heard three times on the Trinity Trail" },
+          { when: "June 2025", what: "Leaves her corporate career to follow the call" },
+          { when: "Nov 2026", what: "SeekerofStory.org launches as a community built on evidence" },
+          { when: "Now", what: "Hosting The Evidence Show, telling stories and building Mega Mission Media" }
+        ],
+        scripture: { ref: "Hebrews 11:1", text: "Now faith is the substance of things hoped for, the evidence of things not seen." }
+      } },
     { id: "latoya-french", name: "Latoya French", city: "Texas", type: "Overcomer",
       from: "Homeless", to: "Homebound",
       headline: "Things depreciate in value. But you, who I created, there is no devaluing you.",
@@ -266,11 +335,7 @@ window.SOS = {
           { when: "May 25, 2023", what: "Cancer-free" },
           { when: "Now", what: "Keeping her promise and going back to sit with those still fighting" }
         ]
-      } },
-    { id: "maria-l", name: "Maria L.", city: "Fort Worth, TX", headline: "From rock bottom to purpose", bio: "Single mom, survivor, and now a mentor to women starting over.", sponsored: false },
-    { id: "james-r", name: "James R.", city: "Dallas, TX", headline: "Founder building on faith", bio: "Left a corporate career to build a business that serves his neighborhood.", sponsored: false },
-    { id: "angela-t", name: "Angela T.", city: "Arlington, TX", headline: "Starting over at 50", bio: "Proof that it's never too late to write the next chapter.", sponsored: false },
-    { id: "david-m", name: "David M.", city: "Grand Prairie, TX", headline: "Breaking the cycle", bio: "Choosing a different story for his kids and grandkids.", sponsored: false }
+      } }
   ],
 
   // Community giving (nonprofit). Links can point to Zeffy, Givebutter, PayPal Giving, etc.
@@ -295,37 +360,23 @@ window.SOS = {
     { id: "s3", title: "From Aerospace to Peace of Mind", seekerId: "lena-killion", category: "Founders",
       summary: "Her grandmother left a plan instead of a burden. Now Lena helps families do the same, and keeps the funeral homes from catching them at their lowest.",
       youtubeId: "lypBfW6ai_M", duration: "", featured: true },
-    { id: "s4", title: "Starting Over at 50", seekerId: "angela-t", category: "Overcomers",
-      summary: "It's never too late to write the next chapter.",
-      youtubeId: "", duration: "14:10" },
-    { id: "s5", title: "Grace in the Waiting Room", seekerId: "maria-l", category: "Overcomers",
-      summary: "Finding peace while the answers were still on the way.",
-      youtubeId: "", duration: "11:48" },
-    { id: "s6", title: "From Side Hustle to Calling", seekerId: "james-r", category: "Founders",
-      summary: "Turning a weekend idea into work that matters.",
-      youtubeId: "", duration: "16:30" },
-    { id: "s7", title: "Breaking the Cycle", seekerId: "david-m", category: "Overcomers",
-      summary: "Choosing a different story for the next generation.",
-      youtubeId: "", duration: "13:02" },
-    { id: "s8", title: "Lost, Then Launched", seekerId: "angela-t", category: "Overcomers",
-      summary: "The long road from wandering to walking with purpose.",
-      youtubeId: "", duration: "10:55" },
-    { id: "s9", title: "What I'd Tell My Younger Self", seekerId: "angela-t", category: "Overcomers",
-      summary: "Hard-won wisdom for anyone standing at a crossroads.",
-      youtubeId: "", duration: "8:47" },
-    { id: "s10", title: "Two Men, Sobriety & a Divine Ride", seekerId: "jeremy-eubanks", category: "Overcomers",
-      summary: "Freshly clean and sober, two men from the Oklahoma oil fields come to Fort Worth to race, and celebrate in Cowtown.",
-      youtubeId: "", duration: "14:14" },
     { id: "s11", title: "Cancer Doesn't Have Me: Ashlan's Story of Surrender & Bold Faith", seekerId: "ashlan-david", category: "Overcomers",
       summary: "Diagnosed with stage 2 breast cancer in 2022, Ashlan stood on Psalm 91 and walked boldly into her healing.",
-      youtubeId: "JhAKrqzEwOM", duration: "" }
+      youtubeId: "JhAKrqzEwOM", duration: "" },
+    { id: "s-susy", title: "In Pursuit of Purpose: From Lost to Launched", seekerId: "susy-gordon", category: "Founders",
+      summary: "From addiction and homelessness to a 25-year career, then leaving it all to follow God's call. Susy shares her own evidence.",
+      youtubeId: "3yLCLKzeSNk", duration: "" },
+    { id: "s10", title: "Two Men, Sobriety & a Divine Ride", seekerId: "jeremy-eubanks", category: "Overcomers",
+      summary: "Freshly clean and sober, two men from the Oklahoma oil fields come to Fort Worth to race, and celebrate in Cowtown.",
+      youtubeId: "", duration: "14:14" }
   ],
 
   episodes: [
-    { id: "e1", number: 1, title: "Welcome to Seeker of Story", summary: "Why every story matters, and what this community is about.", youtubeId: "", duration: "24 min", date: "Coming soon" },
-    { id: "e2", number: 2, title: "Lost Isn't the End", summary: "Real talk about the seasons when you don't know what's next.", youtubeId: "", duration: "31 min", date: "Coming soon" },
-    { id: "e3", number: 3, title: "Faith at Work", summary: "Building a business, a career and a calling without leaving your faith at the door.", youtubeId: "", duration: "28 min", date: "Coming soon" },
-    { id: "e4", number: 4, title: "Your Story Is Somebody's Survival Guide", summary: "Why sharing what you've been through can change someone else's life.", youtubeId: "", duration: "26 min", date: "Coming soon" }
+    // Newest first. Paste each episode's link into url (Spotify, Apple, etc.).
+    // For a YouTube version, paste the video ID into youtubeId to play it on the site.
+    { id: "e3", number: 3, title: "Susy Gordon | In Pursuit of Purpose, From Lost to Launched", summary: "Susy shares her own evidence: leaving a 25-year corporate career and chasing the purpose God placed on her heart.", youtubeId: "", url: "https://www.buzzsprout.com/2617145/episodes/19246881-susy-gordon-in-pursuit-of-purpose-from-lost-to-launched", seekerId: "susy-gordon", duration: "25:48", date: "May 27, 2026" },
+    { id: "e2", number: 2, title: "Lena Killion | MLK Pre Arrangements | She Took the Power Back From the Funeral Home", summary: "Lena's grandmother left a plan, not a burden. Now Lena helps families do the same.", youtubeId: "", url: "https://www.buzzsprout.com/2617145/episodes/19207451-lena-killion-mlk-pre-arrangements-she-took-the-power-back-from-the-funeral-home", duration: "29:17", date: "May 20, 2026", seekerId: "lena-killion" },
+    { id: "e1", number: 1, title: "Carrie Carter | From Layoffs to Launch: How Carrie Built Cowtown Tour Co.", summary: "Laid off twice in three years, Carrie found the gap in her hometown and filled it.", youtubeId: "", url: "https://www.buzzsprout.com/2617145/episodes/19165092-carrie-carter-from-layoffs-to-launch-how-carrie-built-cow-town-tour-co", duration: "7:53", date: "May 12, 2026", seekerId: "carrie-carter" }
   ],
 
   events: [
